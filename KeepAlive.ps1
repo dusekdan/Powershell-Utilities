@@ -13,6 +13,9 @@
 
 .EXAMPLE
     KeepAlive -InstanceURL "http://localhost/" -Silent
+.NOTES
+    Author: Daniel Dusek
+    Date: June 14, 2017    
 #>
 
 Param (
