@@ -18,7 +18,6 @@
 .NOTES
     Author: Daniel Dusek
     Date: August 16. 2017
-
 #>
 
 Param (
