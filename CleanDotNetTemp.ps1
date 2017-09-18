@@ -25,7 +25,6 @@ function Wipe-IISFolder($folderName)
     $i = 0
     while($True)
     {
-        iisreset /stop
         
         $Items = @(Get-ChildItem $folderName)
         if (($Items.Length -eq 0) -or ($i -eq 5))
@@ -34,6 +33,7 @@ function Wipe-IISFolder($folderName)
         } 
         else
         {
+            iisreset /stop
             Get-ChildItem -Path $folderName | Remove-Item -Force -Recurse -EA "SilentlyContinue"
 
             if ($i -ne 0)
